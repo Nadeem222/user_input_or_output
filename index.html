@@ -13,10 +13,12 @@
         num2 <input type="text" id="num2">
         <br>
 
-        <button type="submit" onClick = "doSum();">Sum</button>
-        <button type="submit" onclick="doMinus();">minus</button>
-        <button type="submit" onclick="doMultiply();">Multiply</button>
-        <button type="submit" onclick="dodivide();">Divide</button>
+        <button type="submit" onClick = "doSum();">+</button>
+        <button type="submit" onclick="doMinus();">-</button>
+        <button type="submit" onclick="doMultiply();">*</button>
+        <button type="submit" onclick="dodivide();">/</button>
+        <button type="submit" onclick="doModulus();">%</button>
+
 
 
 
@@ -90,6 +92,23 @@
             console.log("num2: " , num2)
 
             let result = num1 / num2;
+
+            console.log("result: " , result);
+        document.querySelector("#result").innerHTML = result;        }
+
+        function doModulus() {
+            console.log("i am running");
+
+            let num1 = document.querySelector("#num1").value;
+            let num2 = document.querySelector("#num2").value;
+
+            num1 = Number(num1)
+            num2 = Number(num2)
+
+            console.log("num1: " , num1)
+            console.log("num2: " , num2)
+
+            let result = num1 % num2;
 
             console.log("result: " , result);
         document.querySelector("#result").innerHTML = result;        }
